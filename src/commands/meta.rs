@@ -69,6 +69,7 @@ async fn botinfo(ctx: &Context, msg: &Message) -> CommandResult {
     let mut cpu_percent_collector = cpu::CpuPercentCollector::new().unwrap();
     let mut cpu_times_percent_collector = cpu::CpuTimesPercentCollector::new().unwrap();
 
+    let bot_uptime = uptime();
     let mem_total = (&virtual_memory.total() / mib.pow(2)).to_string();
     let mem_usage = (&virtual_memory.used() / mib.pow(2)).to_string();
     let mem_percent = &virtual_memory.percent().to_string();

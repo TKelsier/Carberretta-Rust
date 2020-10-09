@@ -83,7 +83,7 @@ async fn main() {
     tracing::subscriber::set_global_default(subscriber).expect("Failed to start the logger");
 
 
-    let token = env::var("DISCORD_TOKEN")
+    let token = env::var("TOKEN")
         .expect("Expected a token in the environment");
 
     let version = env::var("VERSION")
