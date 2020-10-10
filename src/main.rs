@@ -1,14 +1,13 @@
-//! Requires the 'framework' feature flag be enabled in your project's
-//! `Cargo.toml`.
-//!
-//! This can be enabled by specifying the feature in the dependency section:
-//!
-//! ```toml
-//! [dependencies.serenity]
-//! git = "https://github.com/serenity-rs/serenity.git"
-//! features = ["framework", "standard_framework"]
-//! ```
-mod commands;
+//! This is a discord bot made with `serenity.rs`
+//! This was designed to serve the same functions as the
+//! Discord.py Carberretta Bot.
+//! This is a learning project, first discord bot in Rust
+//! so bare with the most likely stupid and terrible code
+
+
+mod commands; // Load the commands module
+mod utils; // Load the utils module
+mod global_data; // Load global data
 
 use std::{
     collections::HashSet,
